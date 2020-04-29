@@ -44,7 +44,7 @@ class MedicosController extends Controller
         Medicos::insert($datosMedico);
 
        // return response()->json($datosMedico);
-       return redirect('medicos');
+       return redirect('medicos')->with('Mensaje','Médico creado exitosamente');
     }
 
     /**
@@ -83,8 +83,10 @@ class MedicosController extends Controller
         $datosMedico=request()->except(['_token','_method']);
         Medicos::where('id','=',$id)->update($datosMedico);
 
-        $medico= Medicos::findOrFail($id);
-        return view('medicos.edit',compact('medico'));
+       // $medico= Medicos::findOrFail($id);
+       // return view('medicos.edit',compact('medico'));
+       return redirect('medicos')->with('Mensaje','Médico actualizado exitosamente');
+
     }
 
     /**
@@ -96,6 +98,6 @@ class MedicosController extends Controller
     public function destroy($id)
     {
     Medicos::destroy($id);
-    return redirect('medicos');
-    }
+    return redirect('medicos')->with('Mensaje','Médico eliminado');
+}
 }

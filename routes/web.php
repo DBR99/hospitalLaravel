@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+    
 });
 /**Route::get('/medicos', 'MedicosController@index');
 Route::get('/medicos/crear', 'MedicosController@create');
@@ -24,6 +26,7 @@ Route::get('/pacientes/crear', 'PacientesController@create');*/
 
 Route::resource('medicos', 'MedicosController');
 Route::resource('pacientes', 'PacientesController');
+Auth::routes(['register'=>false,'reset'=>false]);
 
 /**Route::resource('user', 'UserController');*/ 
 
