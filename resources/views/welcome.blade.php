@@ -87,6 +87,10 @@
                 <div class="links">
                     <a href="{{url('medicos/')}}">Médicos</a>
                     <a href="{{url('pacientes/')}}">Pacientes</a>
+                    <a href="{{url('hospital/')}}">hospital</a>
+                    <a href="{{url('especialidad/')}}">especialidad</a>
+                    <a href="{{url('consultas/')}}">consultas</a>
+                    <a href="{{url('diagnostico/')}}">diagnostico</a>
                 </div>
             </div>
         </div>

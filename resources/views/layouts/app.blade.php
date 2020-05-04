@@ -12,6 +12,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <script src="https://kit.fontawesome.com/13ca6a47b5.js" crossorigin="anonymous"></script>
+
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -57,6 +60,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="{{route('users.index')}}" class="dropdown-item">
+                                        Administrar Usuarios
+                                    </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -75,7 +82,8 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <br><br>
+            @yield('contenido')
         </main>
     </div>
     <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
