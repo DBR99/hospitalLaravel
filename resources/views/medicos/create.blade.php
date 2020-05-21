@@ -37,18 +37,18 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>Teléfono:</label>
-                                    <input type="number" class="form-control" name="nombre" placeholder="Nombre">
+                                    <input type="number" class="form-control" name="nombre" placeholder="Teléfono">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>Dirección:</label>
-                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                                    <input type="text" class="form-control" name="nombre" placeholder="Dirección">
                                 </div>
                             </div>
 
-                            @foreach ($hospitals as $hospital)
+                            @foreach ($hospitales as $hospital)
                             <option value="{{$hospital->id}}">{{$hospital->nombre}}</option>
 
                             @endforeach
